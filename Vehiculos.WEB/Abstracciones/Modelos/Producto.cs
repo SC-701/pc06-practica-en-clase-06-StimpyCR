@@ -8,14 +8,14 @@ namespace Abstracciones.Modelos
         [Required(ErrorMessage = "El nombre es obligatorio")]
         [StringLength(50, MinimumLength = 2,
         ErrorMessage = "El nombre debe tener entre 2 y 50 caracteres")]
-        [RegularExpression(@"^[\p{L}\s'\-]+$",
+        [RegularExpression(@"^[\p{L}\p{N} ]+$",
         ErrorMessage = "El nombre solo puede contener letras, espacios, apóstrofes o guiones")]
         public string Nombre { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "La descripcion es obligatoria")]
         [StringLength(100, MinimumLength = 2,
         ErrorMessage = "La descripcion debe tener entre 2 y 100 caracteres")]
-        [RegularExpression(@"^[\p{L}\d\s\.,;:¡!¿?'\-()]+$",
+        [RegularExpression(@"^[\p{L}\p{N}\p{P}\p{S} ]+$",
         ErrorMessage = "La descripcion solo puede contener letras, números y signos de puntuación básicos")]
         public string Descripcion { get; set; } = string.Empty;
 
