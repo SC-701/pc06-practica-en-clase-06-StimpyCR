@@ -5,14 +5,14 @@
 <header class="subhead">
     <div class="container">
         <div class="masthead-subheading">SC-701: Programación Web Avanzada</div>
-        <div class="masthead-heading text-uppercase">Examen vehiculo</div>
+        <div class="masthead-heading text-uppercase">Examen producto</div>
     </div>
 </header>
 <section class="page-section bg-light" id="principal">
     <div class="container">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Eliminar vehiculo</h2>
+                <h2 class="section-heading text-uppercase">Eliminar producto</h2>
                 <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
             </div>
 
@@ -20,71 +20,35 @@
                 <form method="post">
                     <row>
                         <dt>
-                            @Html.DisplayNameFor(model => model.vehiculo.Marca):
+                            @Html.DisplayNameFor(model => model.producto.Nombre):
                         </dt>
                         <dd>
-                            @Html.DisplayFor(model => model.vehiculo.Marca)
+                            @Html.DisplayFor(model => model.producto.Nombre)
                         </dd>
                     </row>
                     <row>
                         <dt>
-                            @Html.DisplayNameFor(model => model.vehiculo.Modelo):
+                            @Html.DisplayNameFor(model => model.producto.CodigoBarras):
                         </dt>
                         <dd>
-                            @Html.DisplayFor(model => model.vehiculo.Modelo)
+                            @Html.DisplayFor(model => model.producto.CodigoBarras)
                         </dd>
                     </row>
                     <row>
                         <dt>
-                            @Html.DisplayNameFor(model => model.vehiculo.Placa):
+                            @Html.DisplayNameFor(model => model.producto.Precio):
                         </dt>
                         <dd>
-                            @Html.DisplayFor(model => model.vehiculo.Placa)
+                            @Html.DisplayFor(model => model.producto.Precio)
                         </dd>
                     </row>
-                    <row>
-                        <dt>
-                            @Html.DisplayNameFor(model => model.vehiculo.Anio):
-                        </dt>
-                        <dd>
-                            @Html.DisplayFor(model => model.vehiculo.Anio)
-                        </dd>
-                    </row>
-                    <row>
-                        <dt>
-                            @Html.DisplayNameFor(model => model.vehiculo.Color):
-                        </dt>
-                        <dd>
-                            @Html.DisplayFor(model => model.vehiculo.Color)
-                        </dd>
-                    </row>               <row>
-                        <dt>
-                            @Html.DisplayNameFor(model => model.vehiculo.CorreoPropietario):
-                        </dt>
-                        <dd>
-                            @Html.DisplayFor(model => model.vehiculo.CorreoPropietario)
-                        </dd>
-                    </row>
-                    </row>               <row>
-                        <dt>
-                            @Html.DisplayNameFor(model => model.vehiculo.TelefonoPropietario):
-                        </dt>
-                        <dd>
-                            @Html.DisplayFor(model => model.vehiculo.TelefonoPropietario)
-                        </dd>
-                    </row>
+
                     <div class="form-group">
                         <a class="btn btn-primary" asp-page="./Index">Cancelar</a>
                         <button type="submit" class="btn btn-danger">Eliminar</button>
                     </div>
 
-                    <input type="hidden" asp-for="vehiculo.Marca" />
-                    <input type="hidden" asp-for="vehiculo.Modelo" />
-                    <input type="hidden" asp-for="vehiculo.Placa" />
-                    <input type="hidden" asp-for="vehiculo.TelefonoPropietario" />
-                    <input type="hidden" asp-for="vehiculo.CorreoPropietario" />
-                    <input type="hidden" asp-for="vehiculo.Color" />
-                    <input type="hidden" asp-for="vehiculo.Anio" />
+                    <input type="hidden" asp-for="producto.Id" />
                 </form>
             </div>
         </div>
