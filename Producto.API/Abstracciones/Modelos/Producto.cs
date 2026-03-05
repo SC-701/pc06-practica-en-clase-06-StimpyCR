@@ -7,14 +7,13 @@ namespace Abstracciones.Modelos
     {
         [Required(ErrorMessage = "El nombre es obligatorio")]
         [StringLength(50, MinimumLength = 2, ErrorMessage = "El nombre debe tener entre 2 y 50 caracteres")]
-        // Letras (incluye acentos), mayúsculas/minúsculas y espacios. No permite números ni caracteres especiales.
-        [RegularExpression(@"^[\p{L} ]+$", ErrorMessage = "El nombre solo puede contener letras y espacios")]
+        // Letras (incluye acentos), números y espacios. No permite caracteres especiales.
+        [RegularExpression(@"^[\p{L}\p{N} ]+$", ErrorMessage = "El nombre solo puede contener letras, números y espacios")]
         public string Nombre { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "La descripcion es obligatoria")]
         [StringLength(100, MinimumLength = 2, ErrorMessage = "La descripcion debe tener entre 2 y 100 caracteres")]
         // Letras (con acentos), números, espacios y símbolos/puntuación (caracteres especiales permitidos).
-        // Se excluyen saltos de línea para evitar texto multilínea.
         [RegularExpression(@"^[\p{L}\p{N}\p{P}\p{S} ]+$", ErrorMessage = "La descripcion puede contener letras, números, espacios y caracteres especiales")]
         public string Descripcion { get; set; } = string.Empty;
 
